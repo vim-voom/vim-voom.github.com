@@ -4,8 +4,8 @@
 <title>VOoM: two-pane text outliner</title>
 <meta http-equiv="Content-Language" content="en-us">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta name="keywords" content="Vim, VOoM, Vim outliner, VimOutliner, VO, The Vim Outliner, TVO, outliner, outlining, text outliner, two pane outliner, Leo, reStructuredText, markdown, txt2tags, wiki, viki, org-mode, orgmode">
-<meta name="description" content="VOoM (Vim Outliner of Markers) is a Vim plugin that emulates two pane text outliner.">
+<meta name="keywords" content="Vim, VOoM, Vim outliner, VimOutliner, VO, The Vim Outliner, TVO, outliner, outlining, text outliner, two pane outliner, Leo, reStructuredText, markdown, pandoc, asciidoc, txt2tags, wiki, viki, org-mode, orgmode">
+<meta name="description" content="VOoM: Vim two-pane outliner.">
 
 <style type="text/css">
 img.screenshot {border-style:solid; border-width:3px;}
@@ -63,7 +63,7 @@ This animation shows moving sibling nodes 'AA' and 'BB' Up: the two nodes are se
 
 <!-- reST {{{1= -->
 <a name="rest"></a>
-<h2>reStructuredText, Markdown, txt2tags, wiki, org-mode, etc.</h2>
+<h2>reStructuredText, Markdown, txt2tags, AsciiDoc, Org-mode, wiki, etc.</h2>
 <table><tr>
 <td>
 <a href="pics/voom_rest.png"><img class="screenshot" src="pics/voom_rest_small.gif" alt=""></a>
@@ -80,22 +80,24 @@ VOoM was originally written to work with
 <a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-marker">start fold markers with level numbers</a>,
 which is one of Vim's built-in folding methods and is a versatile outline markup.
 <br><br>
-Current version can handle a variety of markups, including several
+The current version can handle a variety of markups, including several popular
 <a href="http://en.wikipedia.org/wiki/Lightweight_markup_language">lightweight markup languages</a>.
-All these markups have headlines (also called headings, headers, section headers, titles) and thus support an outline structure. VOoM can work with headlines in the following formats:
+These markups have headlines (also called headings, headers, section headers, titles) and thus support an outline structure. VOoM can work with headlines in the following formats:
 <ul>
 <li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-marker">start fold markers with level numbers</a> (this is default)</li>
 <li><a href="http://en.wikipedia.org/wiki/Help:Wiki_markup#Sections">MediaWiki</a></li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2226">vimwiki plugin</a></li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=861">Viki/Deplate plugin</a>, this is also the format of <a href="http://orgmode.org/">Emacs Org-mode</a></li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2226">vimwiki</a></li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=861">Viki/Deplate</a></li>
+<li><a href="http://orgmode.org/">Emacs Org-mode</a></li>
 <li><a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a></li>
-<li><a href="http://daringfireball.net/projects/markdown/">Markdown</a> (both header styles)</li>
+<li><a href="http://daringfireball.net/projects/markdown/">Markdown</a> (both header styles, screenshot of <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> README is <a href="pics/voom_markdown.png">here</a>)</li>
 <li><a href="http://txt2tags.org/">txt2tags</a> (screenshot is <a href="pics/voom_txt2tags.png">here</a>)
+<li><a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> (both title formats, screenshot is <a href="pics/voom_asciidoc.png">here</a>)
 </li>
 <li><a href="http://en.wikipedia.org/wiki/HTML_element#Basic_text">HTML heading tags</a> (single line only)</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=517">The Vim Outliner plugin</a></li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3515">VimOutliner plugin</a></li>
-<li>Python code (like a class browser, but regions between 'class' and 'def' are also nodes)</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=517">The Vim Outliner</a></li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3515">VimOutliner</a></li>
+<li>Python code (like a class browser, but regions between "class" and "def" are also nodes)</li>
 </ul>
 
 </td>
@@ -165,8 +167,16 @@ The command <b><tt>:Voomgrep</tt></b> can also perform boolean AND and NOT searc
 <a href="pics/voom_bookmarks.png"><img class="screenshot" src="pics/voom_bookmarks_small.gif" alt=""></a>
 </td>
 <td>
-A two-pane text outliner makes an excellent organizer of bookmarks and various notes.<br>
-Vim can be configured to highlight URL links (http://..., ftp://..., file:///...) and to launch them with mouse clicks or other keys. Several Vim plugins show how to do that, e.g., <a href="http://www.vim.org/scripts/script.php?script_id=293">utl.vim</a>. Since VOoM is not a 'filetype' plugin, it should be compatible with almost any custom note-taking format.
+A two-pane text outliner makes an excellent organizer of bookmarks and various notes.
+<br>
+<br>
+Vim can be configured to highlight URL links (http://..., ftp://..., file:///...) and to launch them with mouse clicks or other keys. Several Vim plugins show how to do that, e.g., <a href="http://www.vim.org/scripts/script.php?script_id=293">utl.vim</a>.
+<br>
+<br>
+The command <b><tt>:Voomgrep</tt></b> is handy for finding data in a large, database-like outline, especially when there is a tagging system.
+<br>
+<br>
+Since VOoM is not a "filetype" plugin, it should be compatible with almost any plain text note-taking format.
 </td>
 </tr></table>
 <br><br>
@@ -198,7 +208,7 @@ Tree buffer and PyLog buffer in console Vim on Windows. VOoM works with console 
 <a href="pics/voom_linux1.png"><img class="screenshot" src="pics/voom_linux1_small.gif" alt=""></a>
 </td>
 <td>
-Linux, GUI Vim, looking at <a href="http://www.vim.org/scripts/script.php?script_id=1075">netrw.vim</a>. PyLog buffer is open below.<br>
+Linux, GUI Vim, looking at <a href="http://www.vim.org/scripts/script.php?script_id=1075">netrw.vim</a>. PyLog buffer is open below. Another screenshot is <a href="pics/voom_markdown.png">here</a>.<br>
 <br>
 The VOoM plugin is cross-platform. It should work on any system with Python 2.x and vim/gvim compiled with the <a href="http://vimdoc.sourceforge.net/htmldoc/if_pyth.html">Python interface</a>.
 </td>
