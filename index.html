@@ -70,7 +70,7 @@ This animation shows moving sibling nodes 'AA' and 'BB' Up: the two nodes are se
 </td>
 <td>
 Command<br>
-<b><tt>:Voom rest</tt></b><br>
+<b><tt>:Voom&nbsp;rest</tt></b><br>
 creates outline from <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#sections">reStructuredText (reST) section titles</a>.
 This screenshot shows outline of the source for <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">reStructuredText specification</a> available <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.txt">here</a>.
 All major outline operations are supported and can be used to rearrange document sections.
@@ -99,6 +99,18 @@ These markups have headlines (also called headings, headers, section headers, ti
 <li><a href="http://www.vim.org/scripts/script.php?script_id=3515">VimOutliner</a></li>
 <li>Python code (like a class browser, but regions between "class" and "def" are also nodes)</li>
 </ul>
+
+<a name="faq_1"></a>
+<p style="border-style:solid; border-width:1px; padding:10px;">
+<b>NOTE:</b> The <b><tt>:Voom</tt></b> command without an argument always
+creates outline from lines with start fold markers with level numbers.
+To outline another format, an argument specifying the desired markup mode must be provided.<br>
+For a Markdown (MultiMarkdown, Pandoc) file:<br>
+<b><tt>&nbsp;&nbsp;&nbsp;&nbsp;:Voom&nbsp;markdown</tt></b><br>
+For an Orgmode file:<br>
+<b><tt>&nbsp;&nbsp;&nbsp;&nbsp;:Voom&nbsp;org</tt></b><br>
+And so on. There is argument completion -- type ":Voom&nbsp;" and hit &lt;Tab&gt; or &lt;C-d&gt;.
+</p>
 
 </td>
 </tr></table>
