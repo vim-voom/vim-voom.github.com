@@ -16,7 +16,7 @@ tt {font-size:90%; white-space:nowrap;}
 
 <body>
 
-<p><b>VOoM</b> (<u>V</u>im <u>O</u>utliner <u>o</u>f <u>M</u>arkers) is a plugin for text editor <big><a href="http://www.vim.org/about.php">Vim</a></big> that turns Vim into a two-pane outliner.<br>
+<p><b>VOoM</b> (<u>V</u>im <u>O</u>utliner <u>o</u>f <u>M</u>arkups) is a plugin for text editor <big><a href="http://www.vim.org/about.php">Vim</a></big> that turns Vim into a two-pane outliner.<br>
 Description and download page: <i><big><a href="http://www.vim.org/scripts/script.php?script_id=2657">http://www.vim.org/scripts/script.php?script_id=2657</a></big></i><br>
 This page is for screenshots.</p>
 <br>
@@ -97,6 +97,7 @@ These markups have headlines (also called headings, headers, section headers, ti
 <li><a href="http://en.wikipedia.org/wiki/HTML_element#Basic_text">HTML heading tags</a> (single line only)</li>
 <li><a href="http://www.vim.org/scripts/script.php?script_id=517">The Vim Outliner</a></li>
 <li><a href="http://www.vim.org/scripts/script.php?script_id=3515">VimOutliner</a></li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2027">TaskPaper</a></li>
 <li>Python code (like a class browser, but regions between "class" and "def" are also nodes)</li>
 </ul>
 
@@ -109,7 +110,8 @@ For a Markdown (MultiMarkdown, Pandoc) file:<br>
 <b><tt>&nbsp;&nbsp;&nbsp;&nbsp;:Voom&nbsp;markdown</tt></b><br>
 For an Orgmode file:<br>
 <b><tt>&nbsp;&nbsp;&nbsp;&nbsp;:Voom&nbsp;org</tt></b><br>
-And so on. There is argument completion -- type <tt>":Voom&nbsp;"</tt> and hit <tt>&lt;Tab&gt;</tt> or <tt>&lt;C-d&gt;</tt>.
+And so on. There is argument completion -- type <tt>":Voom&nbsp;"</tt> and press <tt>&lt;Tab&gt;</tt> or <tt>&lt;C-d&gt;</tt>.<br>
+See also help for g:voom_ft_modes and g:voom_default_mode.
 </p>
 
 </td>
@@ -129,7 +131,7 @@ And so on. There is argument completion -- type <tt>":Voom&nbsp;"</tt> and hit <
 <td>
 The Python Log buffer, __PyLog__, is created by the command <b><tt>:Voomlog</tt></b>. When present, Python <tt>stdout</tt> and <tt>stderr</tt> are printed to it instead of on Vim command line.<br>
 <br>
-The __PyLog__ buffer is modeled after the log pane of <a href="http://webpages.charter.net/edreamleo/front.html">Leo outlining editor</a>. This tabpage emulates default layout of Leo: tree pane (top left), log pane (top right), body pane (below).
+The __PyLog__ buffer is modeled after the log pane of <a href="http://webpages.charter.net/edreamleo/front.html">Leo outlining editor</a>. The Vim tab page in the screenshot emulates the default layout of Leo panes: tree pane (top left), log pane (top right), body pane (below).
 <br>
 <br>
 Several other VOoM features were inspired by Leo:<br>
