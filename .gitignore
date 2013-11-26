@@ -1,6 +1,7 @@
-*.bat
-*.lnk
-*.vbs
 *.py
+*.pyc
+*.bat
+*.vbs
+*.lnk
 *.sh
 
