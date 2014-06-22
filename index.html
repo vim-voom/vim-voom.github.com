@@ -30,7 +30,7 @@ This page is for screenshots.</p>
 <a href="pics/voom_voomhelp.png"><img class="screenshot" src="pics/voom_voomhelp_small.gif" alt=""></a>
 </td>
 <td>
-The default outline layout after the command <b><tt>:Voom</tt></b>. The outline window (Tree buffer) is on the left.<br>
+The default outline layout after the command <b><tt>:Voom&nbsp;[markup]</tt></b>. The outline window (Tree buffer) is on the left.<br>
 <br>
 This screenshot shows VOoM help file, "doc/voom.txt", which is written as an outline. It is a standard Vim help file except that it uses non-default <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27foldmarker%27">fold markers</a> set from a modeline at the bottom of the file. The command <b><tt>:Voomhelp</tt></b> opens this help file as an outline in a new tabpage.
 </td>
@@ -48,7 +48,7 @@ This screenshot shows VOoM help file, "doc/voom.txt", which is written as an out
 <a href="pics/voom_voomhelp_split.png"><img class="screenshot" src="pics/voom_voomhelp_split_small.gif" alt=""></a>
 </td>
 <td>
-In this screenshot the Tree buffer (on the right) and the source buffer are each split in two windows to show different parts on the outline. VOoM Tree buffers (there is one for each source buffer) can be displayed in any number of different windows and tab pages, just like any other Vim buffer. It is also possible to have an entirely different outline view in another tab page.
+In this screenshot the Tree buffer (on the right) and the source buffer are each split in two windows to show different parts on the same outline. VOoM Tree buffers (there is one for each source buffer) can be displayed in any number of different windows and tab pages, just like any other Vim buffer. It is also possible to have an entirely different outline view in another tab page.
 </td>
 </tr></table>
 <br><br>
@@ -96,13 +96,14 @@ VOoM was originally written to work with
 <a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-marker">start fold markers with level numbers</a>,
 which is one of Vim's built-in folding methods and is the most versatile outline markup.
 <br><br>
-VOoM can currently handle a variety of markups, including several popular
+VOoM can currently handle a variety of markups, including popular
 <a href="http://en.wikipedia.org/wiki/Lightweight_markup_language">lightweight markup languages</a>.
 These markups have headlines (also called headings, headers, section headers, titles) and thus support an outline structure. VOoM can work with headlines in the following formats:
 <ul>
 <li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-marker">start fold markers with level numbers</a> (<tt>:Voom</tt>) This is the default format.</li>
 <li><a href="http://en.wikipedia.org/wiki/Help:Wiki_markup#Sections">MediaWiki</a> (<tt>:Voom&nbsp;wiki</tt>)</li>
 <li><a href="http://www.vim.org/scripts/script.php?script_id=2226">vimwiki</a> (<tt>:Voom&nbsp;vimwiki</tt>)</li>
+<li><a href="https://www.dokuwiki.org/">DokuWiki</a> (<tt>:Voom&nbsp;dokuwiki</tt>)</li>
 <li><a href="http://www.vim.org/scripts/script.php?script_id=861">Viki/Deplate</a> (<tt>:Voom&nbsp;viki</tt>)</li>
 <li><a href="http://orgmode.org/">Emacs Org-mode</a> (<tt>:Voom&nbsp;org</tt>)</li>
 <li><a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> (<tt>:Voom&nbsp;rest</tt>)</li>
@@ -111,7 +112,7 @@ These markups have headlines (also called headings, headers, section headers, ti
 	shows <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> README.</li>
 <li><a href="http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown">Pandoc Markdown</a> (<tt>:Voom&nbsp;pandoc</tt>)</li>
 <li><a href="http://txt2tags.org/">txt2tags</a> (<tt>:Voom&nbsp;txt2tags</tt>) This <a href="pics/voom_txt2tags.png">screenshot</a> shows txt2tags user guide.
-<li><a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> (<tt>:Voom&nbsp;asciidoc</tt>)
+<li><a href="http://asciidoc.org/">AsciiDoc</a> (<tt>:Voom&nbsp;asciidoc</tt>)
 	Both title formats are recognized. This <a href="pics/voom_asciidoc.png">screenshot</a> shows AsciiDoc user guide.</li>
 <li><a href="http://en.wikipedia.org/wiki/LaTeX">LaTeX</a> (<tt>:Voom&nbsp;latex</tt>)
 	This <a href="pics/voom_latex.png">screenshot</a> shows <a href="http://www.ctan.org/tex-archive/info/amslatex/primer">amshelp.tex</a>.</li>
